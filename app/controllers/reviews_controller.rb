@@ -1,9 +1,5 @@
 class ReviewsController < ApplicationController
 
-  def index
-    @reviews = Review.order(created_at: :desc).limit(10)
-  end
-
   def new
     @review = Review.new
     @restaurant = Restaurant.find(params[:restaurant_id])

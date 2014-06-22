@@ -3,6 +3,10 @@ class RestaurantsController < ApplicationController
     @restaurants = Restaurant.all
   end
 
+   def recent
+    @restaurants = Restaurant.order(created_at: :desc).limit(10)
+  end
+
   def new
     @restaurant = Restaurant.new
   end

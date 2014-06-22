@@ -5,5 +5,5 @@ Rails.application.routes.draw do
   end
 
 
-  root 'reviews#index'
+  root 'restaurants#recent'
 end
