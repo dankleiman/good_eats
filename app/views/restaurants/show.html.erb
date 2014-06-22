@@ -1,0 +1,14 @@
+<h2><%= @restaurant.name%></h2>
+
+<p><%= @restaurant.category %></p>
+
+<div>
+  <%= @restaurant.address %><br>
+  <%= @restaurant.city %>, <%= @restaurant.state %>, <%= @restaurant.zip %><br>
+</div>
+<br>
+<div>
+  <%= @restaurant.description %>
+</div>
+
+<p><%= link_to 'All Restaurants', restaurants_path %></p>
