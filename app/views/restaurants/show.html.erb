@@ -11,4 +11,16 @@
   <%= @restaurant.description %>
 </div>
 
+<h3>Reviews</h3>
+
+<ul>
+  <% @restaurant.reviews.each do |review| %>
+    <li>
+      Rating: <%= review.rating %>, Description: <%= review.body %>
+    </li>
+  <%end%>
+</ul>
+
+<p><%= link_to 'Add a Review', new_restaurant_review_path(@restaurant) %></p>
+
 <p><%= link_to 'All Restaurants', restaurants_path %></p>
